@@ -2,30 +2,48 @@
   "name": "n8n-nodes-enhanced-wordpress",
   "version": "0.1.0",
   "description": "Enhanced WordPress node for n8n with support for custom post types, media uploads, comments, taxonomies, advanced field mapping, and improved error handling.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "lint": "eslint . --ext .ts",
-    "prepare": "npm run build"
-  },
   "keywords": [
+    "n8n-community-node-package",
     "n8n",
-    "node",
-    "wordpress",
-    "automation"
+    "wordpress"
   ],
-  "author": "",
   "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier --write nodes credentials",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
   "n8n": {
+    "n8nNodesApiVersion": 1,
     "nodes": [
       "dist/nodes/WordPress/WordPress.node.js"
     ]
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.0.0",
-    "n8n-workflow": "^1.82.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "prettier": "^3.0.0",
     "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
   }
 }
