@@ -1,0 +1,26 @@
+{
+  "name": "n8n-nodes-enhanced-wordpress",
+  "version": "0.1.0",
+  "description": "Enhanced WordPress node for n8n with support for custom post types, media uploads, comments, taxonomies, advanced field mapping, and improved error handling.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "n8n",
+    "node",
+    "wordpress",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "n8n-workflow": "^1.82.0",
+    "typescript": "^5.0.0"
+  }
+}
