@@ -17,7 +17,7 @@
     "type": "git",
     "url": ""
   },
-  "main": "dist/index.js",
+  "main": "dist/nodes/WordPress/WordPress.node.js",
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
