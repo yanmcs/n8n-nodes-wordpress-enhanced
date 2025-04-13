@@ -128,7 +128,7 @@ public/build/
 .pnp.*
 
 # Compiled output
-dist
+# dist
 build
 out
 
